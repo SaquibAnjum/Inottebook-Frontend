@@ -26,6 +26,11 @@ input {
   box-shadow: 10px 10px 20px rgb(168, 168, 168), -10px -10px 20px rgb(203, 202, 202);
 }
 
+.boxshadowe:hover {
+  box-shadow: 10px 10px 20px rgb(168, 168, 168) inset, 1px 1px 10px rgb(203, 202, 202) ;
+  border-radius: 10px;
+}
+
 .boxshadow:hover {
   border: 2px solid black;
 }

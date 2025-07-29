@@ -23,7 +23,7 @@ const Signup = () => {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://inotebook-api-cyan.vercel.app/api/auth/createuser', {
+      const response = await fetch('http://localhost:5000/api/auth/createuser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -34,6 +34,7 @@ const Signup = () => {
       const data = await response.json();
       if (response.ok) {
         alert('User created successfully.');
+        localStorage.setItem("token", response.authtoken);
         navigate('/');
       } else {
         alert('Error creating user: ' + data.error);
